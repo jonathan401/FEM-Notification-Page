@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import notificationData from "../../data";
+import notificationData from "../../data/NotificationData";
 import Card from "../Card/Card";
 import {
   NotificationContainer,
@@ -37,11 +37,7 @@ const Notifications = () => {
               Notifications {getUnread() ? <span>{getUnread()}</span> : ""}
             </h1>
           </div>
-          {getUnread() ? (
-            <button onClick={markAllAsRead}>Mark all as read</button>
-          ) : (
-            ""
-          )}
+          <button onClick={markAllAsRead}>Mark all as read</button>
         </Header>
         {allNotifications.map((data) => {
           return (
