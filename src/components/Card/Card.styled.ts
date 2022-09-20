@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const CardWrapper = styled.article<{ isRead: boolean }>`
-  background-color: ${({ isRead }) => (isRead ? "" : `hsl(210, 60%, 98%)`)};
+  background-color: ${({ isRead, theme }) => (isRead ? "" : theme.unreadBg)};
   padding: 0.9rem;
   margin: 0.6rem auto;
   display: flex;
   align-items: center;
   max-width: 100%;
   border-radius: 0.5rem;
-  color: hsl(219, 12%, 42%);
+  color: ${({ theme }) => theme.textPrimary};
   cursor: ${({ isRead }) => (isRead ? "initial" : "pointer")};
 
   a {
@@ -56,7 +56,7 @@ export const Dot = styled.span<{ isRead: boolean }>`
 
 export const NotificationContent = styled.div<{ misc: unknown }>`
   display: flex;
-  font-size: clamp(0.87rem, 2.5vw, 1rem);
+  font-size: clamp(0.87rem, 2vw, 0.95rem);
   max-width: ${({ misc }) => (misc ? "75%" : "100%")};
   justify-content: flex-start;
   flex-direction: column;

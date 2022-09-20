@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  /* padding: 0.3rem 0.7rem; */
   height: 100%;
   width: 100%;
 `;
 
 export const NotificationContainer = styled.ul`
   width: 100%;
-  background-color: white;
+  background-color: ${({ theme }) => theme.ContainerBg};
   padding: 1.2rem;
   border-radius: 0.9rem;
   list-style: none;
@@ -28,29 +27,29 @@ export const Header = styled.header`
   justify-content: space-between;
 
   h1 {
-    color: hsl(224, 21%, 14%);
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: ${({ theme }) => theme.textDark};
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
   }
 
   span {
     display: inline-block;
     text-align: center;
     margin-left: 0.2rem;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: clamp(0.9rem, 2vw, 0.95rem);
     border-radius: 0.4rem;
     padding: 0.17rem 0.65rem;
-    color: white;
+    color: ${({ theme }) => theme.textPrimary};
     background-color: hsl(219, 85%, 26%);
   }
 
   button {
     font-family: inherit;
     cursor: pointer;
-    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
     color: hsl(219, 12%, 42%);
     outline: 0;
     border: 0;
-    background-color: white;
+    background-color: transparent;
 
     &:hover {
       color: hsl(219, 85%, 26%);

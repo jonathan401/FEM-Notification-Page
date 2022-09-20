@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import { themeProps } from "./data/Themes";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ theme: themeProps }>`
  
   *,
   *::before,
@@ -21,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: hsl(210, 60%, 98%);
+    background-color: ${({ theme }) => theme.mainBg};
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
 `;
