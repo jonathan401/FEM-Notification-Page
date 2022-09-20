@@ -1,11 +1,11 @@
-import ChessImg from "./assets/images/image-chess.webp";
-import Angela from "./assets/images/avatar-angela-gray.webp";
-import Anna from "./assets/images/avatar-anna-kim.webp";
-import Jacob from "./assets/images/avatar-jacob-thompson.webp";
-import Kimberly from "./assets/images/avatar-kimberly-smith.webp";
-import Mark from "./assets/images/avatar-mark-webber.webp";
-import Nathan from "./assets/images/avatar-nathan-peterson.webp";
-import Rizky from "./assets/images/avatar-rizky-hasanuddin.webp";
+import ChessImg from ".././assets/images/image-chess.webp";
+import Angela from "../assets/images/avatar-angela-gray.webp";
+import Anna from "../assets/images/avatar-anna-kim.webp";
+import Jacob from "../assets/images/avatar-jacob-thompson.webp";
+import Kimberly from "../assets/images/avatar-kimberly-smith.webp";
+import Mark from "../assets/images/avatar-mark-webber.webp";
+import Nathan from "../assets/images/avatar-nathan-peterson.webp";
+import Rizky from "../assets/images/avatar-rizky-hasanuddin.webp";
 
 export interface notificationProp {
   id: number;

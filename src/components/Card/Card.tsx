@@ -52,7 +52,7 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <CardWrapper onClick={handleClick} isRead={isRead}>
-      <Avatar avatarSrc={imageSrc} />
+      <Avatar avatarSrc={imageSrc} type={type} />
       <NotificationWrapper>
         <NotificationContent misc={misc}>
           <p>

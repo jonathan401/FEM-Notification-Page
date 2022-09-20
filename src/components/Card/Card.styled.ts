@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardWrapper = styled.article<{ isRead: boolean }>`
   background-color: ${({ isRead }) => (isRead ? "" : `hsl(210, 60%, 98%)`)};
-  padding: 0.5rem;
+  padding: 0.9rem;
   margin: 0.6rem auto;
   display: flex;
   align-items: center;
@@ -44,8 +44,8 @@ export const PostLink = styled.a<{ type: string }>`
 `;
 
 export const Dot = styled.span<{ isRead: boolean }>`
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   display: inline-block;
   background-color: red;
   display: ${({ isRead }) => (isRead ? "none" : "inline-block")};
@@ -56,7 +56,7 @@ export const Dot = styled.span<{ isRead: boolean }>`
 
 export const NotificationContent = styled.div<{ misc: unknown }>`
   display: flex;
-  font-size: 0.76rem;
+  font-size: clamp(0.87rem, 2.5vw, 1rem);
   max-width: ${({ misc }) => (misc ? "75%" : "100%")};
   justify-content: flex-start;
   flex-direction: column;
@@ -69,7 +69,7 @@ export const Time = styled.p`
 `;
 
 export const ImgBox = styled.img`
-  align-self: center;
+  align-self: flex-start;
   justify-self: center;
   width: 35px;
 `;
