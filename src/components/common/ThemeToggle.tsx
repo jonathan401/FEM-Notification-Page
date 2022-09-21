@@ -7,7 +7,7 @@ import { MdLightMode, MdDarkMode } from "react-icons/md";
 export const ThemeToggleStyled = styled.button`
   margin: 0.5rem 0 1.3rem auto;
   border-radius: 0.4rem;
-  padding: 0.4rem 0.3rem;
+  padding: 0.5rem;
   outline: 0;
   border: 0;
   width: fit-content;
@@ -24,8 +24,8 @@ export const ThemeToggleStyled = styled.button`
   }
 
   span {
-    font-size: clamp(0.87rem, 2vw, 0.95rem);
-    padding: 0 0.5rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    padding-left: 0.7rem;
     color: ${({ theme }) => theme.textLight};
     display: inline-block;
   }
