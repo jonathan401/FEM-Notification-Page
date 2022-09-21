@@ -11,11 +11,11 @@ export interface notificationProp {
   id: number;
   isRead: boolean;
   time: string;
-  type: string;
+  notificationType: string;
   imageSrc: string;
   username: string;
   action: string;
-  postlink?: string;
+  postLink?: string;
   misc?: {
     img?: string;
     text?: string;
@@ -27,17 +27,17 @@ const notificationData: notificationProp[] = [
     id: 0,
     isRead: false,
     time: "1m ago",
-    type: "reaction",
+    notificationType: "reaction",
     imageSrc: Mark,
     username: "Mark Webber",
     action: "reacted to your recent post",
-    postlink: "My first tournament today!",
+    postLink: "My first tournament today!",
   },
   {
     id: 1,
     isRead: false,
     time: "5m ago",
-    type: "follow",
+    notificationType: "follow",
     imageSrc: Angela,
     username: "Angela Gray",
     action: "followed you",
@@ -46,17 +46,17 @@ const notificationData: notificationProp[] = [
     id: 2,
     isRead: false,
     time: "1 day ago",
-    type: "community",
+    notificationType: "community",
     imageSrc: Jacob,
     username: "Jacob Thompson",
     action: "has joined your group",
-    postlink: "Chess Club",
+    postLink: "Chess Club",
   },
   {
     id: 3,
     isRead: true,
     time: "5 days ago",
-    type: "message",
+    notificationType: "message",
     imageSrc: Rizky,
     username: "Rizky Hasanuddin",
     action: "sent you a private message",
@@ -69,7 +69,7 @@ const notificationData: notificationProp[] = [
     id: 4,
     isRead: true,
     time: "1 week ago",
-    type: "comment",
+    notificationType: "comment",
     imageSrc: Kimberly,
     username: "Kimbery Smith",
     action: "commented on your picture",
@@ -81,21 +81,21 @@ const notificationData: notificationProp[] = [
     id: 5,
     isRead: true,
     time: "2 weeks ago",
-    type: "reaction",
+    notificationType: "reaction",
     imageSrc: Nathan,
     username: "Nathan Peterson",
     action: "reacted to your recent post",
-    postlink: "5 end-game strategies to increase your win rate",
+    postLink: "5 end-game strategies to increase your win rate",
   },
   {
     id: 6,
     isRead: true,
     time: "2 weeks ago",
-    type: "community",
+    notificationType: "community",
     imageSrc: Anna,
     username: "Anna Kim",
     action: "left the group",
-    postlink: "Chess Club",
+    postLink: "Chess Club",
   },
 ];
 
