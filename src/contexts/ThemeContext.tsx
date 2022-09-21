@@ -11,27 +11,33 @@ type Props = {
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
+const defaultTheme: "light" | "dark" = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches
+  ? "dark"
+  : "light";
+
+const themeData = JSON.parse(localStorage.getItem("theme") as "light" | "dark");
+
+const initialTheme = themeData ? themeData : defaultTheme;
+
 export const ThemeStore = ({ children }: Props) => {
-  let userDefault: "light" | "dark" = window.matchMedia(
-    "(prefers-color-scheme: dark)"
-  ).matches
-    ? "dark"
-    : "light";
-  const [theme, setTheme] = useState<"light" | "dark">(userDefault);
+  const [theme, setTheme] = useState<"light" | "dark">(initialTheme);
 
   // effects
   useEffect(() => {
-    // still working on it
-    // update theme based on local storage
-    // let storedTheme: "light" | "dark" = localStorage.getItem("theme")
-    //   ? localStorage.getItem("theme")
-    //   : theme;
+    const storedTheme = JSON.parse(
+      localStorage.getItem("theme") as "light" | "dark"
+    );
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
   }, [theme]);
 
   const switchTheme = (currTheme: "light" | "dark") => {
     currTheme === "light" ? setTheme("dark") : setTheme("light");
   };
-  localStorage.setItem("theme", theme);
+  localStorage.setItem("theme", JSON.stringify(theme));
 
   return (
     <ThemeContext.Provider value={{ theme, switchTheme }}>
