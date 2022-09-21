@@ -12,11 +12,20 @@ type Props = {
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export const ThemeStore = ({ children }: Props) => {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  let userDefault: "light" | "dark" = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches
+    ? "dark"
+    : "light";
+  const [theme, setTheme] = useState<"light" | "dark">(userDefault);
 
   // effects
   useEffect(() => {
     // still working on it
+    // update theme based on local storage
+    // let storedTheme: "light" | "dark" = localStorage.getItem("theme")
+    //   ? localStorage.getItem("theme")
+    //   : theme;
   }, [theme]);
 
   const switchTheme = (currTheme: "light" | "dark") => {
