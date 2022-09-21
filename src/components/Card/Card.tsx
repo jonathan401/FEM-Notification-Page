@@ -18,11 +18,11 @@ interface CardProps {
     id: number;
     isRead: boolean;
     time: string;
-    type: string;
+    notificationType: string;
     imageSrc: string;
     username: string;
     action: string;
-    postlink?: string;
+    postLink?: string;
     misc?: {
       img?: string;
       text?: string;
@@ -32,7 +32,17 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({
-  data: { isRead, time, type, imageSrc, username, action, postlink, misc, id },
+  data: {
+    isRead,
+    time,
+    notificationType,
+    imageSrc,
+    username,
+    action,
+    postLink,
+    misc,
+    id,
+  },
   markAsRead,
 }) => {
   const handleClick = () => {
@@ -52,16 +62,24 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <CardWrapper onClick={handleClick} isRead={isRead}>
-      <Avatar avatarSrc={imageSrc} type={type} />
+      <Avatar
+        avatarSrc={imageSrc}
+        notificationType={notificationType}
+        altText={username}
+      />
       <NotificationWrapper>
         <NotificationContent misc={misc}>
-          <p>
+          <h2>
             <UserLink href="/">{username}</UserLink> {action}{" "}
-            <PostLink type={type} href="/">
-              {postlink}
-            </PostLink>
-            <Dot isRead={isRead} aria-label="hidden" />
-          </p>
+            {postLink ? (
+              <PostLink notificationType={notificationType} href="/">
+                {postLink}
+              </PostLink>
+            ) : (
+              ""
+            )}
+            <Dot isRead={isRead} aria-hidden="true" />
+          </h2>
           <Time>{time}</Time>
         </NotificationContent>
         {renderMisc()}

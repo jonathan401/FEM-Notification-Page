@@ -39,9 +39,9 @@ export const NotificationWrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const PostLink = styled.a<{ type: string }>`
-  color: ${({ type, theme }) =>
-    type === "reaction" ? theme.postLinkText : theme.groupLinkText};
+export const PostLink = styled.a<{ notificationType: string }>`
+  color: ${({ notificationType, theme }) =>
+    notificationType === "reaction" ? theme.postLinkText : theme.groupLinkText};
 `;
 
 export const Dot = styled.span<{ isRead: boolean }>`
@@ -57,10 +57,14 @@ export const Dot = styled.span<{ isRead: boolean }>`
 
 export const NotificationContent = styled.div<{ misc: unknown }>`
   display: flex;
-  font-size: clamp(0.87rem, 2vw, 0.95rem);
   max-width: ${({ misc }) => (misc ? "75%" : "100%")};
   justify-content: flex-start;
   flex-direction: column;
+
+  h2 {
+    font-weight: 400;
+    font-size: clamp(0.87rem, 2vw, 0.95rem);
+  }
 `;
 
 export const Time = styled.p`

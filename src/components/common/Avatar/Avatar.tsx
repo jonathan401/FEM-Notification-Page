@@ -5,16 +5,21 @@ import { AvatarStyle, AvatarContainer, IconWrap } from "./Avatar.styled";
 
 interface avatarProps {
   avatarSrc: string;
-  type: string;
+  notificationType: string;
+  altText: string;
 }
 
-const Avatar: React.FC<avatarProps> = ({ avatarSrc, type }) => {
-  const Icon = iconMap[type as keyof iconProps];
+const Avatar: React.FC<avatarProps> = ({
+  avatarSrc,
+  notificationType,
+  altText,
+}) => {
+  const Icon = iconMap[notificationType as keyof iconProps];
 
   return (
     <AvatarContainer>
-      <AvatarStyle src={avatarSrc} alt="" />
-      <IconWrap>{<Icon color="white" size="13" />}</IconWrap>
+      <AvatarStyle src={avatarSrc} alt={altText} />
+      <IconWrap aria-hidden="true">{<Icon color="white" size="13" />}</IconWrap>
     </AvatarContainer>
   );
 };
