@@ -19,10 +19,12 @@ const defaultTheme: "light" | "dark" = window.matchMedia(
 
 const themeData = JSON.parse(localStorage.getItem("theme") as "light" | "dark");
 
-const initialTheme = themeData ? themeData : defaultTheme;
+// const initialTheme = themeData ? themeData : defaultTheme;
 
 export const ThemeStore = ({ children }: Props) => {
-  const [theme, setTheme] = useState<"light" | "dark">(initialTheme);
+  const [theme, setTheme] = useState<"light" | "dark">(
+    themeData ? themeData : defaultTheme
+  );
 
   // effects
   useEffect(() => {
@@ -31,6 +33,7 @@ export const ThemeStore = ({ children }: Props) => {
     const storedTheme = JSON.parse(
       localStorage.getItem("theme") as "light" | "dark"
     );
+    console.log(storedTheme);
     if (storedTheme) {
       setTheme(storedTheme);
     }
