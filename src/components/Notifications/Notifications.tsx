@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import notificationData from "../../data/NotificationData";
 import Card from "../Card/Card";
@@ -7,6 +7,7 @@ import {
   Header,
   Container,
 } from "./Notifications.styled";
+import ThemeToggle from "../common/ThemeToggle";
 
 const Notifications = () => {
   const [allNotifications, setAllNotifications] = useState([
@@ -31,6 +32,7 @@ const Notifications = () => {
   return (
     <Container>
       <NotificationContainer>
+        <ThemeToggle />
         <Header>
           <div>
             <h1>

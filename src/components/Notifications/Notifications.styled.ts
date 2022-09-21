@@ -9,11 +9,11 @@ export const NotificationContainer = styled.ul`
   width: 100%;
   background-color: ${({ theme }) => theme.ContainerBg};
   padding: 1.2rem;
-  border-radius: 0.9rem;
   list-style: none;
   box-shadow: 0 0.2rem 2.6rem rgb(131, 166, 210 / 40%);
 
   @media screen and (min-width: 800px) {
+    border-radius: 0.9rem;
     margin-top: 5rem;
     height: initial;
     max-width: 700px;
@@ -38,21 +38,21 @@ export const Header = styled.header`
     font-size: clamp(0.9rem, 2vw, 0.95rem);
     border-radius: 0.4rem;
     padding: 0.17rem 0.65rem;
-    color: ${({ theme }) => theme.textPrimary};
-    background-color: hsl(219, 85%, 26%);
+    color: ${({ theme }) => theme.textLight};
+    background-color: ${({ theme }) => theme.tertiary};
   }
 
   button {
     font-family: inherit;
     cursor: pointer;
     font-size: clamp(0.85rem, 2vw, 0.95rem);
-    color: hsl(219, 12%, 42%);
+    color: ${({ theme }) => theme.textPrimary};
     outline: 0;
     border: 0;
     background-color: transparent;
 
     &:hover {
-      color: hsl(219, 85%, 26%);
+      color: ${({ theme }) => theme.hoverColor};
     }
   }
 `;

@@ -16,18 +16,19 @@ export const CardWrapper = styled.article<{ isRead: boolean }>`
     text-decoration: none;
 
     &:hover {
-      color: hsl(219, 85%, 26%);
+      color: ${({ theme }) => theme.hoverColor};
     }
   }
 `;
 
 export const UserLink = styled.a`
-  color: hsl(224, 21%, 14%);
+  margin-right: 0.05rem;
+  color: ${({ theme }) => theme.userLinkText};
   font-weight: 700;
   text-decoration: none;
 
   &:hover {
-    color: hsl(219, 85%, 26%);
+    color: ${({ theme }) => theme.hoverColor};
   }
 `;
 
@@ -39,8 +40,8 @@ export const NotificationWrapper = styled.div`
 `;
 
 export const PostLink = styled.a<{ type: string }>`
-  color: ${({ type }) =>
-    type === "reaction" ? "hsl(219, 12%, 42%)" : "hsl(219, 85%, 26%)"};
+  color: ${({ type, theme }) =>
+    type === "reaction" ? theme.postLinkText : theme.groupLinkText};
 `;
 
 export const Dot = styled.span<{ isRead: boolean }>`
@@ -63,7 +64,7 @@ export const NotificationContent = styled.div<{ misc: unknown }>`
 `;
 
 export const Time = styled.p`
-  color: hsl(219, 14%, 63%);
+  color: ${({ theme }) => theme.textPrimary};
   font-weight: 300;
   margin-top: 0.1rem;
 `;

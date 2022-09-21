@@ -1,6 +1,6 @@
 import React from "react";
 
-import Avatar from "../common/Avatar";
+import Avatar from "../common/Avatar/Avatar";
 import { MessageBox } from "../common/MessageBox.styled";
 import {
   CardWrapper,
@@ -45,7 +45,7 @@ const Card: React.FC<CardProps> = ({
       return misc.text ? (
         <MessageBox>{misc.text}</MessageBox>
       ) : (
-        <ImgBox src={misc.img} />
+        <ImgBox src={misc.img} alt="young girl playing chess" />
       );
     }
   };
