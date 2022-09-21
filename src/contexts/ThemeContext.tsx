@@ -26,6 +26,8 @@ export const ThemeStore = ({ children }: Props) => {
 
   // effects
   useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
+
     const storedTheme = JSON.parse(
       localStorage.getItem("theme") as "light" | "dark"
     );
@@ -37,7 +39,6 @@ export const ThemeStore = ({ children }: Props) => {
   const switchTheme = (currTheme: "light" | "dark") => {
     currTheme === "light" ? setTheme("dark") : setTheme("light");
   };
-  localStorage.setItem("theme", JSON.stringify(theme));
 
   return (
     <ThemeContext.Provider value={{ theme, switchTheme }}>
