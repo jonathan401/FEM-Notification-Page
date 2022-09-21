@@ -1,23 +1,21 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  height: 100%;
-  width: 100%;
-`;
-
-export const NotificationContainer = styled.ul`
   width: 100%;
   background-color: ${({ theme }) => theme.ContainerBg};
   padding: 1.2rem;
-  list-style: none;
-  box-shadow: 0 0.2rem 2.6rem rgb(131, 166, 210 / 40%);
 
   @media screen and (min-width: 800px) {
     border-radius: 0.9rem;
     margin-top: 5rem;
-    height: initial;
     max-width: 700px;
   }
+`;
+
+export const NotificationContainer = styled.ul`
+  width: 100%;
+  list-style: none;
+  box-shadow: 0 0.2rem 2.6rem rgb(131, 166, 210 / 40%);
 `;
 
 export const Header = styled.header`

@@ -31,16 +31,16 @@ const Notifications = () => {
 
   return (
     <Container>
-      <NotificationContainer>
-        <ThemeToggle />
-        <Header>
-          <div>
-            <h1>
-              Notifications {getUnread() ? <span>{getUnread()}</span> : ""}
-            </h1>
-          </div>
-          <button onClick={markAllAsRead}>Mark all as read</button>
-        </Header>
+      <ThemeToggle />
+      <Header>
+        <div>
+          <h1 id="main-heading">
+            Notifications {getUnread() ? <span>{getUnread()}</span> : ""}
+          </h1>
+        </div>
+        <button onClick={markAllAsRead}>Mark all as read</button>
+      </Header>
+      <NotificationContainer aria-labelledby="main-heading">
         {allNotifications.map((data) => {
           return (
             <li key={data.id}>
