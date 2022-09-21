@@ -71,6 +71,7 @@ export const Time = styled.p`
   color: ${({ theme }) => theme.textPrimary};
   font-weight: 300;
   margin-top: 0.1rem;
+  font-size: clamp(0.85rem, 2vw, 0.9rem);
 `;
 
 export const ImgBox = styled.img`
