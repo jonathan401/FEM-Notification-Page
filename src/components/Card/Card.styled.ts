@@ -76,5 +76,5 @@ export const Time = styled.p`
 export const ImgBox = styled.img`
   align-self: flex-start;
   justify-self: center;
-  width: 35px;
+  width: 40px;
 `;
