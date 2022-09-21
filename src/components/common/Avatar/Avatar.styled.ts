@@ -10,7 +10,7 @@ export const AvatarContainer = styled.div`
   position: relative;
 `;
 
-export const IconWrap = styled.div`
+export const IconWrap = styled.div<{ iconBg: string }>`
   position: absolute;
   width: 1.3rem;
   height: 1.3rem;
@@ -20,5 +20,5 @@ export const IconWrap = styled.div`
   border-radius: 50%;
   right: -0.3rem;
   bottom: -0.2rem;
-  background-color: #3045e4;
+  background-color: ${({ iconBg }) => iconBg};
 `;

@@ -14,12 +14,15 @@ const Avatar: React.FC<avatarProps> = ({
   notificationType,
   altText,
 }) => {
-  const Icon = iconMap[notificationType as keyof iconProps];
+  const Icon = iconMap[notificationType as keyof iconProps].icon;
+  const iconBg = iconMap[notificationType as keyof iconProps].bg;
 
   return (
     <AvatarContainer>
       <AvatarStyle src={avatarSrc} alt={altText} />
-      <IconWrap aria-hidden="true">{<Icon color="white" size="13" />}</IconWrap>
+      <IconWrap iconBg={iconBg} aria-hidden="true">
+        {<Icon color="white" size="13" />}
+      </IconWrap>
     </AvatarContainer>
   );
 };
