@@ -41,7 +41,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/jonathan401/FEM-Notification-Page)
-- Live Site URL: [Deployed using vercel](https://your-live-site-url.com)
+- Live Site URL: [Deployed using vercel](https://fem-notification-page-jonathan401.vercel.app/)
 
 ### Built with
 
@@ -93,13 +93,13 @@ const GlobalStyle = createGlobalStyle<{ theme: themeProps }>`
 
 - [Creating accessible toggle](https://www.w3.org/WAI/ARIA/apg/patterns/switch/) - This article helped me create an accessible toggle component
 
-- []() - This stackoverflow answer helped me out when i got the error: _Element implicityly has an `any` type because expression of type `string` can't be used to index type `iconProps`_. I discovered that Typescript understands a `dynamic key` may have any value and so Typescript throws an error. To solve this, you must cast the `dynamic key` as a type of the `object type` or in this case, the `iconprops` interface.
+- [Stackoverflow](https://stackoverflow.com/questions/57086672/element-implicitly-has-an-any-type-because-expression-of-type-string-cant-b) - A stackoverflow solution to the error _Element implicitly has an `any` type because expression of type `string` can't be used to index_ helped me out when I got a similar error. I discovered that Typescript understands a `dynamic key` may have any value and so Typescript throws an error. To solve this, you must cast the `dynamic key` as a type of the `object type` or in this case, the `iconprops` interface.
 
 ## Author
 
 - Github - [Jonathan Gomina](https://www.your-site.com)
 - Frontend Mentor - [@jonathan401](https://www.frontendmentor.io/profile/jonathan401)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Twitter - [@GominaKehinde4](https://twitter.com/GominaKehinde4)
 
 ## Acknowledgments
 
