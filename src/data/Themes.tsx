@@ -21,6 +21,7 @@ export type themeProps = {
     hoverColor: string;
     borderColor: string;
     boxHoverBg: string;
+    boxShadow: string;
   };
 };
 
@@ -39,6 +40,7 @@ const themes: themeProps = {
     hoverColor: "hsl(219, 85%, 26%)",
     borderColor: "hsl(205, 33%, 90%)",
     boxHoverBg: "hsl(211, 68%, 94%)",
+    boxShadow: "rgba(14, 15, 31, 0.3)",
   },
   dark: {
     mainBg: "#0a0b18",
@@ -54,6 +56,7 @@ const themes: themeProps = {
     hoverColor: "#3046e4",
     borderColor: "#1e2139",
     boxHoverBg: "#1e2139",
+    boxShadow: "#cccaca",
   },
 };
 

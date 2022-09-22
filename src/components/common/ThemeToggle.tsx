@@ -17,6 +17,7 @@ export const ThemeToggleStyled = styled.button`
   cursor: pointer;
   transition: all 0.5s;
   background-color: ${({ theme }) => theme.tertiary};
+  box-shadow: 0 2px ${({ theme }) => theme.boxShadow};
 
   &:focus {
     outline-offset: 2px;
