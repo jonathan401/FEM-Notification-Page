@@ -7,7 +7,7 @@ export const Container = styled.main`
 
   @media screen and (min-width: 800px) {
     border-radius: 0.9rem;
-    margin-top: 5rem;
+    margin: 4rem 0;
     max-width: 700px;
   }
 `;
