@@ -37,16 +37,15 @@ const ThemeToggle = () => {
     <ThemeToggleStyled
       type="button"
       aria-label="theme switch"
-      role="switch"
-      aria-checked={theme === "dark" ? true : false}
+      aria-pressed={theme === "dark" ? true : false}
       onClick={() => switchTheme(theme)}
     >
       {theme === "light" ? (
-        <MdLightMode aria-hidden="true" size="20" color="#def3fa" />
-      ) : (
         <MdDarkMode aria-hidden="true" size="20" color="#def3fa" />
+      ) : (
+        <MdLightMode aria-hidden="true" size="20" color="#def3fa" />
       )}
-      <span>{theme === "dark" ? "on" : "off"}</span>
+      <span>{theme === "dark" ? "light" : "dark"}</span>
     </ThemeToggleStyled>
   );
 };
