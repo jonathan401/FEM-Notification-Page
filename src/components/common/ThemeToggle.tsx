@@ -17,7 +17,7 @@ export const ThemeToggleStyled = styled.button`
   cursor: pointer;
   transition: all 0.5s;
   background-color: ${({ theme }) => theme.tertiary};
-  box-shadow: 0 2px ${({ theme }) => theme.boxShadow};
+  box-shadow: 0 4px ${({ theme }) => theme.boxShadow};
 
   &:focus {
     outline-offset: 2px;
@@ -39,7 +39,7 @@ const ThemeToggle = () => {
       type="button"
       aria-label="theme switch"
       aria-pressed={theme === "dark" ? true : false}
-      onClick={() => switchTheme(theme)}
+      onClick={() => switchTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "light" ? (
         <MdDarkMode aria-hidden="true" size="20" color="#def3fa" />
