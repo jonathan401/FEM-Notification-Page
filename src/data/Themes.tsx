@@ -56,7 +56,7 @@ const themes: themeProps = {
     hoverColor: "#3046e4",
     borderColor: "#1e2139",
     boxHoverBg: "#1e2139",
-    boxShadow: "#cccaca",
+    boxShadow: "#1e2139",
   },
 };
 
