@@ -42,15 +42,22 @@ export const Header = styled.header`
 
   button {
     font-family: inherit;
+    padding: 0.2rem;
+    outline: 0;
+    border: 0;
+    border-radius: 0.3rem;
     cursor: pointer;
     font-size: clamp(0.85rem, 2vw, 0.95rem);
     color: ${({ theme }) => theme.textPrimary};
-    outline: 0;
-    border: 0;
     background-color: transparent;
 
     &:hover {
       color: ${({ theme }) => theme.hoverColor};
+    }
+
+    &:focus {
+      outline-offset: 3px;
+      outline: 2px solid ${({ theme }) => theme.tertiary};
     }
   }
 `;
